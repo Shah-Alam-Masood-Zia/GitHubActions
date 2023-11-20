@@ -15,8 +15,8 @@ jobs:
         id: var_source_step
         run: |
           echo "Performing a random task"
-          echo "{var1_name}={Technosoft}"  >> $GITHUB_OUTPUT   
-          echo "{var2_date}={$(date +'%Y-%m-%d-%H-%M')}"  >> $GITHUB_OUTPUT
+          echo "var1_name=Technosoft"  >> $GITHUB_OUTPUT   
+          echo "var2_date=$(date +'%Y-%m-%d-%H-%M')"  >> $GITHUB_OUTPUT
         # Deprecated
         #  echo "::set-output name=var1_name::Technosoft"
         #  echo "::set-output name=var2_date::$(date +'%Y-%m-%d-%H-%M')"
