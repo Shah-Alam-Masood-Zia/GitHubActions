@@ -14,9 +14,9 @@ jobs:
 
     steps:
       - id: step1
-        run: echo "name=test" >> $GITHUB_OUTPUT
+        run: echo "test=ImportantValue1" >> $GITHUB_OUTPUT
       - id: step2
-        run: echo "name=test"  >> $GITHUB_OUTPUT
+        run: echo "test=ImportantValue2"  >> $GITHUB_OUTPUT
 
   job_2:
     runs-on: ubuntu-latest
