@@ -3,8 +3,10 @@ name: A Basic Workflow
 #Controls when workflow will run
 on:
     #Following are two events for only main branch
-    push:
-        branches: [ "main" ]
+    
+    #push:
+        #branches: [ "main" ]
+        
         #Filters on which event will be based
         #branches-ignore: [ "ignore" ]
         #paths: ".github/*"
