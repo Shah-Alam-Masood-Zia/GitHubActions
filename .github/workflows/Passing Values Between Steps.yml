@@ -15,9 +15,12 @@ jobs:
         id: var_source_step
         run: |
           echo "Performing a random task"
-          echo "::set-output name=var1_name::Technosoft"  
-          echo "::set-output name=var2_date::$(date +'%Y-%m-%d-%H-%M')"
-        #GitHub Action Workflow commands are accessed via '::' such as (::set-output)
+          echo "{var1_name}={Technosoft}"  >> $GITHUB_OUTPUT   
+          echo "{var2_date}={$(date +'%Y-%m-%d-%H-%M')}"  >> $GITHUB_OUTPUT
+        # Deprecated
+        #  echo "::set-output name=var1_name::Technosoft"
+        #  echo "::set-output name=var2_date::$(date +'%Y-%m-%d-%H-%M')"
+        #GitHub Action Workflow commands are accessed via :: such as (::set-output)
 
       - name: Get-Variable-Value
         run: |
